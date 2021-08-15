@@ -1,3 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap");
+:root {
+  --white: #dff9fb;
+  --black: #2c3e50;
+  --orange: rgba(255, 200, 124, 1);
+  --yellow: rgba(252, 251, 121, 1);
+}
 body {
   text-align: center;
+  margin: 0;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 200, 124, 1) 0%,
+    rgba(252, 251, 121, 1) 90%
+  );
+  color: var(--black);
+  height: 100vh;
+  font-family: "Comfortaa", cursive;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 0;
+  column-gap: 0;
+}
+
+hr {
+  width: 98vw;
+  border: 1px solid var(--black);
+}
+
+.portfolio-link {
+  text-align: left;
+  margin: 20px;
+}
+
+.portfolio-link a,
+.src-link a,
+.linked-in-link a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 2px solid var(--black);
+  transition: background-color 350ms;
+}
+
+.portfolio-link a {
+  border-radius: 50%;
+  background-color: var(--yellow);
+  display: inline-block;
+  transition: background-color 350ms, transform 500ms;
+}
+
+.portfolio-link a:hover {
+  background-color: var(--orange);
+  transform: rotate(360deg) scale(1.5);
+}
+
+.src-link {
+  margin: 20px;
+}
+
+.src-link a,
+.linked-in-link a {
+  border-radius: 5px;
+  background-color: var(--yellow);
+}
+
+.src-link a:hover {
+  background-color: var(--orange);
+}
+
+.linked-in-link {
+  margin: 20px;
+}
+
+.linked-in-link a:hover {
+  background-color: var(--orange);
+}
+
+.brand-name {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.hero-txt {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.instruction {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cost-price,
+.quantity,
+.selling-price {
+  margin: 50px auto;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cost-price__input,
+.quantity__input,
+.selling-price__input {
+  width: 300px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--black);
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: inherit;
+  background-color: inherit;
+}
+
+.cost-price__label,
+.quantity__label,
+.selling-price__label {
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: inherit;
+  border-bottom: 2px solid var(--black);
+}
+
+.check-btn {
+  padding: 10px 20px;
+  font-size: 1.7rem;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: background-color 350ms;
+  border: 2px solid var(--black);
+  background-color: var(--yellow);
+}
+
+.check-btn:hover {
+  background-color: var(--orange);
+}
+
+.output {
+  font-size: 1.2rem;
+  border: 2px solid black;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: var(--white);
 }
