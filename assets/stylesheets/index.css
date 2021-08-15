@@ -59,7 +59,7 @@ hr {
 }
 
 .src-link {
-  margin: 20px;
+  margin: auto;
 }
 
 .src-link a,
@@ -73,7 +73,7 @@ hr {
 }
 
 .linked-in-link {
-  margin: 20px;
+  margin: auto;
 }
 
 .linked-in-link a:hover {
