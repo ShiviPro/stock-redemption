@@ -25,6 +25,21 @@ checkBtn.addEventListener("click", (event) => {
         <h2>Please enter valid value/s in upper field/s.</h2>
         <h2>It helps us to give you the most accurate result.</h2>
     `;
+  } else if (parseInt(quantity) < 0) {
+    output.innerHTML = `
+        <h2>Woah stop right there <i class="fas fa-hand-paper"></i> So, you're telling me that quantity you purchased was negative.</h2>
+        <h2>Please recheck the value entered.</h2>
+    `;
+  } else if (parseInt(costPrice) < 0) {
+    output.innerHTML = `
+        <h2>Woah stop right there <i class="fas fa-hand-paper"></i> Is it even a purchase if you get money on buying a stock, instead of paying for it.</h2>
+        <h2>Please recheck the value entered.</h2>
+    `;
+  } else if (parseInt(sellingPrice) < 0) {
+    output.innerHTML = `
+        <h2>Woah stop right there <i class="fas fa-hand-paper"></i> You're saying that stock is now priced in negative.</h2>
+        <h2>Please recheck the value entered.</h2>
+    `;
   } else {
     let costPriceVal = parseFloat(costPrice);
     let quantityVal = parseFloat(quantity);
