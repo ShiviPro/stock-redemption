@@ -25,6 +25,11 @@ checkBtn.addEventListener("click", (event) => {
         <h2>Please enter valid value/s in upper field/s.</h2>
         <h2>It helps us to give you the most accurate result.</h2>
     `;
+  } else if (parseInt(quantity) === 0) {
+    output.innerHTML = `
+        <h2>Woah stop right there <i class="fas fa-hand-paper"></i> If you didn't purchase anything, then why bother to check for profit/loss !</h2>
+        <h2>Please check change on the stocks which you actually purchased.</h2>
+    `;
   } else if (parseInt(quantity) < 0) {
     output.innerHTML = `
         <h2>Woah stop right there <i class="fas fa-hand-paper"></i> So, you're telling me that quantity you purchased was negative.</h2>
