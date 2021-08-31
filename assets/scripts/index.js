@@ -50,7 +50,6 @@ checkBtn.addEventListener("click", (event) => {
     let totalSP = sellingPriceVal * quantityVal;
 
     if (totalSP > totalCP) {
-      console.log("Entering profit case");
       let profit = totalSP - totalCP;
       let profitPercent = (profit / totalCP) * 100;
 

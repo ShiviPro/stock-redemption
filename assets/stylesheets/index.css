@@ -161,6 +161,7 @@ hr {
   transition: background-color 350ms;
   border: 2px solid var(--black);
   background-color: var(--yellow);
+  outline: none;
 }
 
 .check-btn:hover {
@@ -175,6 +176,16 @@ hr {
   padding: 10px 20px;
   margin: 10px auto;
   background-color: var(--yellow);
+  animation: fadeIn 600ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .emoji {
