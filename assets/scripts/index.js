@@ -1,10 +1,6 @@
-const costPriceElem = document.querySelector(".cost-price__input");
-const quantityElem = document.querySelector(".quantity__input");
-const sellingPriceElem = document.querySelector(".selling-price__input");
-
-console.log(costPriceElem);
-console.log(quantityElem);
-console.log(sellingPriceElem);
+const costPriceElem = document.querySelector("#cost-price__input");
+const quantityElem = document.querySelector("#quantity__input");
+const sellingPriceElem = document.querySelector("#selling-price__input");
 
 const output = document.createElement("div");
 output.classList.add("output");
@@ -81,7 +77,6 @@ checkBtn.addEventListener("click", (event) => {
             `;
       }
     } else if (totalCP > totalSP) {
-      console.log("Entering loss case");
       let loss = totalCP - totalSP;
       let lossPercent = (loss / totalCP) * 100;
 
@@ -108,7 +103,6 @@ checkBtn.addEventListener("click", (event) => {
             `;
       }
     } else {
-      console.log("Entering no profit no loss case");
       output.innerHTML = `
         <h2>Neither profit nor loss. This one looks fine.</h2>
         `;
