@@ -7,25 +7,23 @@ output.classList.add("output");
 
 const checkBtn = document.querySelector("#check-btn");
 
-const isFloating = (num) => {
-  return num.toString().indexOf(".") != -1;
-};
+const isFloating = num => num.toString().indexOf(".") != -1;
 
-const getDigitsAfterDec = (num) => {
+const getDigitsAfterDec = num => {
   num = num.toString();
-  let digitsAfterDec = num.substring(num.indexOf(".") + 1);
+  const digitsAfterDec = num.substring(num.indexOf(".") + 1);
   return digitsAfterDec.length;
 };
 
-checkBtn.addEventListener("click", (event) => {
+checkBtn.addEventListener("click", () => {
   document.body.classList.remove("body--danger");
   document.body.classList.remove("body--warning");
   document.body.classList.remove("body--happy");
   document.body.classList.remove("body--smile");
   document.body.classList.remove("body--no-feelings");
-  let costPrice = costPriceElem.value;
-  let quantity = quantityElem.value;
-  let sellingPrice = sellingPriceElem.value;
+  const costPrice = costPriceElem.value;
+  const quantity = quantityElem.value;
+  const sellingPrice = sellingPriceElem.value;
 
   if (costPrice === "" || quantity === "" || sellingPrice === "") {
     output.innerHTML = `
@@ -53,12 +51,12 @@ checkBtn.addEventListener("click", (event) => {
         <h2>Please verify the current price entered.</h2>
     `;
   } else {
-    let costPriceVal = parseFloat(costPrice);
-    let quantityVal = parseFloat(quantity);
-    let sellingPriceVal = parseFloat(sellingPrice);
+    const costPriceVal = parseFloat(costPrice);
+    const quantityVal = parseFloat(quantity);
+    const sellingPriceVal = parseFloat(sellingPrice);
 
-    let totalCP = costPriceVal * quantityVal;
-    let totalSP = sellingPriceVal * quantityVal;
+    const totalCP = costPriceVal * quantityVal;
+    const totalSP = sellingPriceVal * quantityVal;
 
     if (totalSP > totalCP) {
       let profit = totalSP - totalCP;
@@ -92,9 +90,9 @@ checkBtn.addEventListener("click", (event) => {
         }
       }
 
-      let congratsMessage25 = `Hey you might be good at this <i class="fas fa-smile-wink emoji"></i>`;
-      let congratsMessage50 = `Woah this feeling is magical <i class="fas fa-grin-stars emoji"></i>`;
-      let congratsMessage75 = `What the !! This might be off all the charts <i class="fas fa-surprise emoji"></i>`;
+      const congratsMessage25 = `Hey you might be good at this <i class="fas fa-smile-wink emoji"></i>`;
+      const congratsMessage50 = `Woah this feeling is magical <i class="fas fa-grin-stars emoji"></i>`;
+      const congratsMessage75 = `What the !! This might be off all the charts <i class="fas fa-surprise emoji"></i>`;
 
       output.innerHTML = `
             <h2>Oh you made a profit of ${profitPercent}%, which sums up to a total of ₹${profit}.</h2>
@@ -146,9 +144,9 @@ checkBtn.addEventListener("click", (event) => {
         }
       }
 
-      let consolationMessage25 = `Maybe today's not your day <i class="fas fa-tired emoji"></i>`;
-      let consolationMessage50 = `Woah this is brutal <i class="fas fa-sad-tear emoji"></i>`;
-      let consolationMessage75 = `May have to completely rethink this investment <i class="fas fa-angry emoji"></i>`;
+      const consolationMessage25 = `Maybe today's not your day <i class="fas fa-tired emoji"></i>`;
+      const consolationMessage50 = `Woah this is brutal <i class="fas fa-sad-tear emoji"></i>`;
+      const consolationMessage75 = `May have to completely rethink this investment <i class="fas fa-angry emoji"></i>`;
 
       output.innerHTML = `
             <h2>Oh you made a loss of ${lossPercent}%, which sums up to a total of ₹${loss}.</h2>
